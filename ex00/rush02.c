@@ -27,8 +27,7 @@ void	ft_putchar(char c);
 */
 static int	raises_error(long long int x, long long int y)
 {
-	return (x < 1 || y < 1 || x > INT_MAX
-		|| y > INT_MAX || x < INT_MIN || y < INT_MIN);
+	return (x < 1 || y < 1 || x > INT_MAX || y > INT_MAX);
 }
 
 /*
