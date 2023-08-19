@@ -22,7 +22,7 @@ void	ft_putchar(char c);
 	Vamos explicar cada uma das exceções:
 		- Se x ou y for menor que 1, o retângulo não existe.
 		- Se x ou y for maior que INT_MAX, o retângulo é muito grande.
-		- Se x ou y for menor que INT_MIN, o retângulo é muito pequeno.
+		- Se x ou y for menor que INT_MIN, o retângulo não existe.
 	Essa função é prefixada com `static` porque ela só é usada nesse arquivo.
 */
 static int	raises_error(int x, int y)
