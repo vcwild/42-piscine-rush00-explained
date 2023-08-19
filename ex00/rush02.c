@@ -96,9 +96,9 @@ static void	print_line(char start, char center, char end, int columns)
 	Exemplo:
 		rush(5, 3);
 	Imprime:
-		ABA
-		B B
-		CBC
+		ABBBA
+		B   B
+		CBBBC
 
 	Vamos entender cada passo do programa faz:
 		- Inicialmente o programa joga a responsabilidade de erros de entrada
