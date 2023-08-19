@@ -1,32 +1,29 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   rush02.c                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: vwildner <vwildner@student.42sp.org.br>    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/19 11:56:35 by vwildner          #+#    #+#             */
-/*   Updated: 2023/08/19 15:32:57 by vwildner         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <limits.h>
 
 void	ft_putchar(char c);
 
 /*
-	Essa função é prefixada com `static` porque ela só é usada nesse arquivo.
 	Essa função é responsável por tratar erros de argumentos.
-	Se algum dos argumentos for menor que 1 ou maior que INT_MAX, a função
-	retorna 1, caso contrário retorna 0.
-	A função é implementada desse jeito porque não queremos mostrar
-	nada na tela se acontecer um erro de entrada, mas também não queremos
-	que o programa pare de funcionar.
+	Não queremos mostrar nada na tela se acontecer um erro de entrada,
+	mas também não queremos que o programa pare de funcionar.
+
+	A função retorna (1) quando encontra um erro porque é mais fácil
+	verificar se a função retornou (1) do que verificar se a função
+	retornou (0) e depois verificar se o programa está funcionando
+	corretamente.
+
+	Observe o exemplo:
+		if (raises_error(x, y))
+			return ;
+	Se a função retornar (1), o programa vai parar de executar porque ele
+	encontrou um erro (raises an error).
+	Se a função retornar (0), o programa vai continuar executando.
 
 	Vamos explicar cada uma das exceções:
 		- Se x ou y for menor que 1, o retângulo não existe.
 		- Se x ou y for maior que INT_MAX, o retângulo é muito grande.
 		- Se x ou y for menor que INT_MIN, o retângulo é muito pequeno.
+	Essa função é prefixada com `static` porque ela só é usada nesse arquivo.
 */
 static int	raises_error(int x, int y)
 {
@@ -37,7 +34,6 @@ static int	raises_error(int x, int y)
 }
 
 /*
-	Essa função é prefixada com `static` porque ela só é usada nesse arquivo.
 	Essa é a função responsável por imprimir uma linha do retângulo.
 	Se o retângulo tiver apenas uma coluna, a função imprime apenas o
 	caractere de início.
@@ -49,6 +45,8 @@ static int	raises_error(int x, int y)
 	impresso.
 
 	Ao final de cada linha, a função acrescenta uma quebra de linha.
+	Essa função é prefixada com `static` porque ela só é usada nesse arquivo.
+
 */
 static void	print_line(char start, char center, char end, int columns)
 {
@@ -96,7 +94,6 @@ static void	print_line(char start, char center, char end, int columns)
 			- Se o retângulo tiver 6 linhas, o loop é executado quatro vezes.
 			- E assim por diante...
 		- Ao final do programa, a última linha do retângulo é impressa.
-
 */
 void	rush(int x, int y)
 {
