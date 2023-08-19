@@ -44,6 +44,33 @@ static int	raises_error(int x, int y)
 	correspondente ao número de colunas menos 2, e o caractere de fim é
 	impresso.
 
+	A linha 	while (columns-- > 2)
+	é equivalente a:
+		while (columns > 2)
+		{
+			columns--;
+			ft_putchar(center);
+		}
+	Isso significa que a variável `columns` é decrementada até que ela seja
+	igual a 2 e então finaliza o loop.
+	A variável columns é decrementada porque ela é a quantidade de colunas
+
+	Enquanto a gente tiver mais de duas colunas, a gente imprime o caractere
+	central e decrementa a quantidade de colunas. Isso faz sentido porque
+	quando a gente tiver apenas duas colunas, a gente não precisa imprimir
+	o caractere central, a gente só precisa imprimir o caractere de início e
+	o caractere de fim.
+
+	Exemplo:
+	columns = 2
+	Imprimimos o caractere de início e o caractere de fim.
+	columns = 3
+	Imprimimos o caractere de início, o caractere central uma vez e o
+	caractere de fim.
+	columns = 4
+	Imprimimos o caractere de início, o caractere central duas vezes e o
+	caractere de fim.
+
 	Ao final de cada linha, a função acrescenta uma quebra de linha.
 	Essa função é prefixada com `static` porque ela só é usada nesse arquivo.
 
