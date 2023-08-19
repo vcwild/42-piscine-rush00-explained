@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 /*
 	É necessário declarar a função `rush` antes de usá-la porque ela só é
 	implementada mais depois no arquivo `rush02.c`, porém o compilador ainda
