@@ -25,12 +25,10 @@ void	ft_putchar(char c);
 		- Se x ou y for menor que INT_MIN, o retângulo não existe.
 	Essa função é prefixada com `static` porque ela só é usada nesse arquivo.
 */
-static int	raises_error(int x, int y)
+static int	raises_error(long long int x, long long int y)
 {
-	if (x < 1 || y < 1 || x > INT_MAX
-		|| y > INT_MAX || x < INT_MIN || y < INT_MIN)
-		return (1);
-	return (0);
+	return (x < 1 || y < 1 || x > INT_MAX
+		|| y > INT_MAX || x < INT_MIN || y < INT_MIN);
 }
 
 /*
