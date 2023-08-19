@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <limits.h>
 
 /*
 	É necessário declarar a função `rush` antes de usá-la porque ela só é
